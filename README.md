@@ -8,3 +8,5 @@ Test repository
 ### Run tests
 
 * Run tests using "npm run wdio"
+* After tests run in "results" folder will be generated HTML test report
+
