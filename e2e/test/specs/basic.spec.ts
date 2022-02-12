@@ -17,7 +17,7 @@ describe('Basic application tests', () => {
     it('Should click on each job and check job page is shown, position names are the same', async () => {
         const jobs = await HomePage.jobListing
         //check only 5 jobs, have a problem with loop when job listing is big - if more time i'd check each job
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             const name = await HomePage.getJobName(i);
             await jobs[i].click();
             await JobPage.applyButton.waitForDisplayed();
