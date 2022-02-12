@@ -21,6 +21,7 @@ describe('Basic application tests', () => {
             const name = await HomePage.getJobName(i);
             await jobs[i].click();
             await JobPage.applyButton.waitForDisplayed();
+            expect(await JobPage.applyButton).toBeClickable();
             const jobTitle = await JobPage.pageHeader.getText();
             expect(await jobTitle.toLowerCase()).toEqual(name.toLowerCase());
             browser.back();
