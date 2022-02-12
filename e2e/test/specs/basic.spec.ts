@@ -28,7 +28,7 @@ describe('Basic application tests', () => {
             await HomePage.pageHeader.waitForDisplayed();
           }
     });
-    it('Should open job page and check elements', async () => {
+    it('Should open job page and apply to position with valid data', async () => {
         const jobs = await HomePage.jobListing;
         await jobs[0].click()
         await JobPage.applyButton.waitForDisplayed();
@@ -48,7 +48,7 @@ describe('Basic application tests', () => {
 
     });
     // Bug in the app - user can provide not valid Email address!!! 
-    it('Should open job page and check validations for apply position dialog', async () => {
+    it('Should open job page and check validations for apply position dialog, not valid mail', async () => {
         const jobs = await HomePage.jobListing;
         await jobs[0].click()
         await JobPage.applyButton.waitForDisplayed();
